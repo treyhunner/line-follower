@@ -33,8 +33,8 @@ def main():
     sensor_on()
     turn_on_black()
     while True:
-        NumOut(60, LCD_LINE1, Sensor(IN_3))
-        if Sensor(IN_3) > LIGHT_THRESHOLD:
+        NumOut(60, LCD_LINE1, get_sensor())
+        if get_sensor() > LIGHT_THRESHOLD:
             turn_on_white()
             Wait(10)
         else:
